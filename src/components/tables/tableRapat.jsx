@@ -81,7 +81,7 @@ const TableRapat = ({ dataset }) => {
           onClick={handlePrint}
           className="btn btn-xs btn-primary rounded-lg shadow-md text-white"
         >
-          Print
+          !Print
         </button>
       </div>
       <DataTable
