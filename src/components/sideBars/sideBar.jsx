@@ -9,6 +9,7 @@ import {
   HiOutlineIdentification,
   HiOutlinePresentationChartBar,
 } from "react-icons/hi2";
+import { HiOutlineLightningBolt } from "react-icons/hi";
 
 const SidebarDashboard = ({ props }) => {
   const { isCollapse } = useContext(SidebarContext);
@@ -45,7 +46,9 @@ const SidebarDashboard = ({ props }) => {
         href={"/Dashboard"}
         className="flex gap-3 justify-start items-center"
       >
-        <div className="w-10 h-10 rounded-full shadow-lg bg-gradient-to-tr from-green-400 to-green-600"></div>
+        <div className="w-10 h-10 rounded-full shadow-lg bg-gradient-to-tr from-blue-400 to-blue-600 flex justify-center items-center">
+          <HiOutlineLightningBolt color="white"/>
+        </div>
         <div className={isCollapse ? "block " : "hidden"}>
           <h1 className="text-2xl font-medium ">Kantorku.</h1>
           <p className="text-xs font-light">&copy; Diskominfo | Prototype</p>
@@ -66,7 +69,7 @@ const SidebarDashboard = ({ props }) => {
         })}
       </div>
       <div className="flex justify-start items-center gap-3">
-        <div className="p-4 bg-green-500 rounded-lg text-xl font-extrabold text-white">
+        <div className="p-4 bg-blue-500 rounded-lg text-xl font-extrabold text-white">
           &copy;
         </div>
         <div className={isCollapse ? "block" : "hidden"}>
