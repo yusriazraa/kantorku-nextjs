@@ -3,29 +3,35 @@ import React, { useContext } from "react";
 import ItemLink from "./itemLink";
 import { SidebarContext } from "@/app/Dashboard/layout";
 import Link from "next/link";
+import {
+  HiFingerPrint,
+  HiOutlineFolderOpen,
+  HiOutlineIdentification,
+  HiOutlinePresentationChartBar,
+} from "react-icons/hi2";
 
 const SidebarDashboard = ({ props }) => {
   const { isCollapse } = useContext(SidebarContext);
   let listLink = [
     {
-      icons: "ico",
+      icons: <HiFingerPrint />,
+      title: "Dashboard",
+      linkTo: "/Dashboard",
+    },
+    {
+      icons: <HiOutlineIdentification />,
       title: "Rapat",
       linkTo: "/Dashboard/Rapat",
     },
     {
-      icons: "ico",
-      title: "Rapat",
-      linkTo: "/Dashboard/Rapat",
+      icons: <HiOutlineFolderOpen />,
+      title: "Berkas",
+      linkTo: "/Dashboard/Berkas",
     },
     {
-      icons: "ico",
-      title: "Rapat",
-      linkTo: "/Dashboard/Rapat",
-    },
-    {
-      icons: "ico",
-      title: "Rapat",
-      linkTo: "/Dashboard/Rapat",
+      icons: <HiOutlinePresentationChartBar />,
+      title: "Operasional",
+      linkTo: "/Dashboard/Operasional",
     },
   ];
   return (
@@ -45,13 +51,6 @@ const SidebarDashboard = ({ props }) => {
           <p className="text-xs font-light">&copy; Diskominfo | Prototype</p>
         </div>
       </Link>
-      {/* button tambah ... */}
-      {/* <button className="btn bg-gradient-to-tr from-green-400 to-green-600 w-full shadow-lg text-white">
-        <div className="text-xl w-5 h-5 flex rounded-full bg-green-500 text-white font-bold items-center justify-center shadow-md">
-          +
-        </div>{" "}
-        Tambah Rapat
-      </button> */}
       {/* daftar link */}
       <div className="flex-1 flex-col gap-4 space-y-4">
         {listLink.map((items, index) => {

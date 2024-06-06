@@ -4,7 +4,7 @@ import React from "react";
 import Navigator from "@/components/Navigator";
 
 const DashboardPage = (props) => {
-  const Navigate = ["Dashboard", "Data"];
+  const Navigate = [];
   return (
     <>
       <Navigator pageName="Dashboard" items={Navigate} />
