@@ -132,6 +132,30 @@ export const Forms2 = (props) => {
   );
 };
 
+export const ProgreesForms = (props) => {
+  const [hashShow] = useContext(StateProvide);
+  return (
+    <div className="transition-all ease-in-out ">
+      <h1>{hashShow}</h1>
+      <progress
+        className={`progress w-56 transition-all delay-300 ${
+          hashShow === 1
+            ? "progress-info"
+            : hashShow === 2
+            ? "progress-warning"
+            : hashShow === 3
+            ? "progress-success"
+            : "progress"
+        }`}
+        value={
+          hashShow === 1 ? 33 : hashShow === 2 ? 66 : hashShow === 3 ? 100 : 25
+        }
+        max="100"
+      />
+    </div>
+  );
+};
+
 export const Forms3 = (props) => {
   const [hashShow, setHashShow, isStatus, setIsStatus] =
     useContext(StateProvide);
@@ -201,30 +225,6 @@ const CreateRapat = () => {
           setIsStatus,
         ]}
       >
-        <div className="transition-all ease-in-out ">
-          <h1>{hashShow}</h1>
-          <progress
-            className={`progress w-56 transition-all delay-300 ${
-              hashShow === 1
-                ? "progress-info"
-                : hashShow === 2
-                ? "progress-warning"
-                : hashShow === 3
-                ? "progress-success"
-                : "progress"
-            }`}
-            value={
-              hashShow === 1
-                ? 33
-                : hashShow === 2
-                ? 66
-                : hashShow === 3
-                ? 100
-                : 25
-            }
-            max="100"
-          />
-        </div>
         {/* input 1 */}
         <section
           className={`p-[20px] bg-white rounded-lg shadow-md space-y-5 glass ${
