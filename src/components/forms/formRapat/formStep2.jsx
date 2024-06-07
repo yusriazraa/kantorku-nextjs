@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import InputGroup from "../inputGroup";
 import InputSelect from "../inputSelect";
 import InputField from "../inputField";
-import { StateProvide } from "@/app/Dashboard/Rapat/Create/page";
+import { useStore } from "@/lib/globalState/zustand";
 
 const FormStep2 = () => {
-  const { currentStap, setCurrentStep, hashSelect, setHashSelect } =
-    useContext(StateProvide);
+  const { hashSelect, setHashSelect } = useStore();
+
   return (
     <form action="">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
@@ -29,7 +29,7 @@ const FormStep2 = () => {
                 <input
                   type="checkbox"
                   className="toggle toggle-info rounded-full transition-all delay-100 toggle-sm"
-                  onChange={() => setHashSelect((curr) => !curr)}
+                  onChange={() => setHashSelect(!hashSelect)}
                   checked={hashSelect}
                 />
                 <small className="text-xs text-gray-400 gap-1">

@@ -3,11 +3,10 @@ import InputGroup from "../inputGroup";
 import InputField from "../inputField";
 import InputSelect from "../inputSelect";
 import InputGroupIcons from "../inputGroupIcons";
-import Link from "next/link";
-import { StateProvide } from "@/app/Dashboard/Rapat/Create/page";
+import { useStore } from "@/lib/globalState/zustand";
 
 const FormStep1 = (props) => {
-  const { currentStep, setCurrentStep } = useContext(StateProvide);
+  const { currentStep, setCurrentStep } = useStore();
   return (
     <form action="">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">

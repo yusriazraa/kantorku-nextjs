@@ -1,8 +1,8 @@
-import { StateProvide } from "@/app/Dashboard/Rapat/Create/page";
-import React, { useContext } from "react";
+import { useStore } from "@/lib/globalState/zustand";
+import React from "react";
 
 const BarStepper = () => {
-  const { currentStep } = useContext(StateProvide);
+  const { currentStep } = useStore();
 
   // Menghitung nilai progress berdasarkan tahap yang dicapai
   const progressValue = (currentStep / 4) * 100;
