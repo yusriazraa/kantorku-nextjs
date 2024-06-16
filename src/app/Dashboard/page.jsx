@@ -2,7 +2,11 @@ import CardStatistic from "@/components/cards/cardStatistic";
 import MyCalender from "@/components/calender/calender";
 import React from "react";
 import Navigator from "@/components/Navigator";
-import { HiOutlineTicket, HiOutlineUserCircle, HiPaperClip } from "react-icons/hi2";
+import {
+  HiOutlineTicket,
+  HiOutlineUserCircle,
+  HiPaperClip,
+} from "react-icons/hi2";
 
 const DashboardPage = (props) => {
   const Navigate = [];
@@ -13,7 +17,12 @@ const DashboardPage = (props) => {
         <CardStatistic
           icons={<HiOutlineUserCircle />}
           title={"Data Pegawai"}
-          jumlah={20}
+          jumlah={200}
+        />
+        <CardStatistic
+          icons={<HiOutlineUserCircle />}
+          title={"Data Pegawai"}
+          jumlah={200}
         />
         <CardStatistic
           icons={<HiOutlineTicket />}
@@ -23,11 +32,6 @@ const DashboardPage = (props) => {
         <CardStatistic
           icons={<HiOutlineTicket />}
           title={"Jumlah Rapat"}
-          jumlah={20}
-        />
-        <CardStatistic
-          icons={<HiPaperClip />}
-          title={"Operasional"}
           jumlah={20}
         />
       </div>
